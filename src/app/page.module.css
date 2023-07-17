@@ -1,12 +1,26 @@
 .main {
   display: flex;
   flex-direction: column;
+  background-color: #fff;
+  color: black;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
+  position: relative;
 }
-
+.mainPage{
+  background-color: #ff4;
+  width: 100%;
+  /* height: 100vh; */
+}
+.modalScreen {
+  height:50vh;
+  width:700px;
+  position: absolute;
+  margin: auto;
+  margin-top: 50px;
+  background-color: blue;
+}
 .description {
   display: inherit;
   justify-content: inherit;
