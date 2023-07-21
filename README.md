@@ -34,7 +34,9 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## Live Demo for App
 
+https://github.com/AyahDweikat/modal-app/assets/98915307/d8d7255a-8142-4051-b9d7-8206146c62f4
 ## About App 
 <h2>Modal Component Implemantaion</h2>
 
@@ -52,10 +54,6 @@ content (text, forms, images, etc.).
 and its content.
 6. Provide a clean and intuitive API for consuming the Modal component and defining its content.
 
-## Live Demo for App
 
-
-
-https://github.com/AyahDweikat/modal-app/assets/98915307/d8d7255a-8142-4051-b9d7-8206146c62f4
 
 
