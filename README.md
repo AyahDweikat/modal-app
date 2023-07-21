@@ -51,3 +51,7 @@ content (text, forms, images, etc.).
 5. Use a compound component pattern to encapsulate the logic and rendering of the modal
 and its content.
 6. Provide a clean and intuitive API for consuming the Modal component and defining its content.
+
+## Live Demo for App
+
+
