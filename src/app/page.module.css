@@ -1,59 +1,66 @@
 .main {
   background-color: #fff;
-  color: black;
   min-height: 100vh;
-  height: 100vh;
 }
 .mainPage{
-  background-color: #eeeeee;
-  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: #eeeeee;
+  height: 100vh;
 }
 
-.modalScreen {
-  height:50vh;
-  width:700px;
-  position: absolute;
-  top:20vh;
-  left:24.5vw;
+.modalDialog {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  display: flex;
-  flex-direction: column;
   border-radius: 8px;
   background-color: #fff;
-
   color:black;
   box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.2);
+  padding-inline: 50px;
+  height:50vh;
+  min-width: 250px;
+  width:50vw;
+  position: absolute;
+  top:20vh;
+  left:25vw;
 }
 .modalBody{
-  width:80%;
-  padding-block:10px;
-  margin:auto;
   font-size: 16px;
   line-height: 20px !important;
 }
-.title, .description{
+.title{
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 30px;
+}
+.description{
   line-height: 20px;
   font-size: 16px;
   padding-top: 10px;
 }
-.wrapperBtns{
+.modalHeader{
+  margin-top: 20px;
   display:flex;
-  justify-content:center;
-  padding-bottom:20px;
+  justify-content: space-between;
+  gap:15px;
+}
+.modalFooter{
+  display:flex;
+  justify-content: center;
+  padding-bottom: 30px;
   gap:15px;
 }
 .mainBtn {
   padding: 8px 12px;
   background-color: hsl(300, 76%, 50%);
-  outline:none;
   color:black;
+  outline: none;
   margin-top: 50px;
-  border: 1px solid transparent;
+  border: 2px solid hsl(300, 76%, 50%);
   border-radius: 8px;
   width:fit-content;
 }
@@ -67,8 +74,6 @@
   color:hsl(300, 76%, 50%);
   margin-top: 20px;
   width:fit-content;
-  margin-left: auto;
-  margin-right: 20px;
 }
 .closeBtn {
   padding: 8px 12px;
@@ -80,8 +85,10 @@
   width:fit-content;
 }
 .closeBtn:hover, .mainBtn:hover {
-  background-color: hsl(300, 76%, 80%);
+  background-color: rgb(224, 31, 224, 0.5);
   cursor: pointer;
+  color: black;
+  border: 2px solid transparent;
 }
 
 
@@ -103,68 +110,11 @@
     max-width: 320px;
     text-align: center;
   }
-
-  .card {
-    padding: 1rem 2.5rem;
-  }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .center::before {
-    transform: none;
-    height: 300px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
-
-  .description p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
-  }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
+  .modalDialog {
+    width:84vw;
+    left:8vw;
+    height: 55vh;
+    padding-inline: 20px;
   }
 }
 
