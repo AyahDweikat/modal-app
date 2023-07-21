@@ -12,18 +12,30 @@ interface ToggleContextType {
 }
 
 
+
+
+export const Flyout= (props:any) => {
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+
+  return (
+    <ModalContext.Provider value={{ modalOpen, setModalOpen }}>
+      <div>{props.children}</div>
+    </ModalContext.Provider>
+  );
+}
+
 export const MainPage:React.FC<Props> =({children}) =>{
   const {modalOpen, setModalOpen } = useContext<ToggleContextType>(ModalContext);
   return (
-    <div className={styles.mainPage} 
+    <div 
+    className={styles.mainPage} 
     onClick={() => setModalOpen(false)}
     >
     <button
-      className={styles.Btn}
+      className={styles.mainBtn}
       onClick={(e) => {
         e.stopPropagation();
         setModalOpen(true);
-        console.log("hello")
       }}
     >
       Open Modal
@@ -40,23 +52,11 @@ export const MainPage:React.FC<Props> =({children}) =>{
 }
 
 
-
-
-
-export const Modal= (props:any) => {
-  const [modalOpen, setModalOpen] = useState<boolean>(false);
-
-  return (
-    <ModalContext.Provider value={{ modalOpen, setModalOpen }}>
-      <div className={styles.modalBody}>{props.children}</div>
-    </ModalContext.Provider>
-  );
-}
 function Header (){
   const { setModalOpen } = useContext(ModalContext);
   return (
     <button
-      className={styles.Btn}
+      className={styles.xBtn}
       onClick={(e) => {
         e.stopPropagation();
         setModalOpen(false);
@@ -67,13 +67,23 @@ function Header (){
   )
 }
 const Body: React.FC<Props> = ({ children }) => {
-  return <div>{children}</div>
+  return <div className={styles.modalBody}>{children}</div>
 }
 function Footer (){
   const { setModalOpen } = useContext(ModalContext);
   return (
+    <div className={styles.wrapperBtns}>
     <button
-      className={styles.Btn}
+      className={styles.mainBtn}
+      onClick={(e) => {
+        e.stopPropagation();
+        setModalOpen(false);
+      }}
+    >
+      Add Button
+    </button>
+    <button
+      className={styles.closeBtn}
       onClick={(e) => {
         e.stopPropagation();
         setModalOpen(false);
@@ -81,13 +91,14 @@ function Footer (){
     >
       Close Button
     </button>
+    </div>
   )
 }
 
-Modal.Header = Header;
-Modal.Body = Body;
-Modal.Footer =Footer;
-
+// Flyout.MainPage = MainPage;
+Flyout.Header = Header;
+Flyout.Body = Body;
+Flyout.Footer =Footer;
 
 
 

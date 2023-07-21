@@ -1,11 +1,11 @@
 import React from 'react'
-
+import styles from '../app/page.module.css'
 const SomeComponent = () => {
   return (
     <>
-    <h1>Hello</h1>
-    <h2>I am Ayah Dweikat</h2>
-    <p>I am a Frontend Developer</p>
+    <h3 className={styles.title}>Hello,</h3>
+    <p className={styles.description}>I am Ayah Dweikat</p>
+    <p className={styles.description}>I am a Frontend Developer</p>
     </>
   )
 }

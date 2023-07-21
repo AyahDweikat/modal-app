@@ -13,20 +13,22 @@ import styles from "./page.module.css";
 import React from "react";
 
 import SomeComponent from "@/Components/SomeComponent";
-import { MainPage, Modal } from "./ModalContext";
+import { Flyout, MainPage } from "./ModalContext";
 
 export default function Home() {
   return (
     <div className={styles.main}>
-      <MainPage>
-        <Modal>
-          <Modal.Header />
-          <Modal.Body>
+      <Flyout>
+        <MainPage>
+          <Flyout.Header />
+          <Flyout.Body>
+            ...
             <SomeComponent />
-          </Modal.Body>
-          <Modal.Footer />
-        </Modal>
-      </MainPage>
+            ...
+          </Flyout.Body>
+          <Flyout.Footer />
+        </MainPage>
+      </Flyout>
     </div>
   );
 }
